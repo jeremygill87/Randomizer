@@ -1,0 +1,14 @@
+.btn-primary {
+    background-color: #333333;
+    color: #cccccc;
+    font-size: 23px;
+    padding: 15px;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+#nameOutput {
+    padding: 15px;
+    font-size: 26px;
+    text-align: center;
+}
