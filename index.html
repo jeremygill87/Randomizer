@@ -32,17 +32,36 @@
                 
             </div>
         </div>
+        <div class = "row">
+            <div class = "col-md-10" id = "questionOutput" style="margin-left: 50px; margin-top: 100px">
+            
+            </div>
+        </div>
         
 
     <script>
     
-    var e14 = ["Sydney", "Sherley", "Brandon", "Brittany", "Sebastian", "Irvin", "Denise", "Dre", "Michelle", "Afrah", "Stephanie", "Andy", "Nicholas", "Cristopher", "Jeff"]
+    var e14 = ["John","George","Paul"]
 
-    var e13 = ["Khusen","Mohammed","Kenneth", "Ming Xuan","Raymond","Johnny","Samantha","Joel","Sarah","Adonis", "Kaliyah","Becky","Kevin","Elizabeth","Jayden","Daler","Salameh","Kayla","Mishelle"]
+    var e13 = ["John","George","Paul"]
 
-    var e12 = ["Dorian","Nickholas","Eddy","Roselyn","Ricky","Miah","Michelle","Maya","Isaac","Arianna","Frank","Efrain","Vanessa","Phillip","Gizzani","Adolfo","Melanie","Jean","Moises","Emily","Daisy","Katie","Markel","Alejandro","Joselyn","Xitlaly","Daniel","Kevin","Mario","Salih","Ely","Danely"]
+    var e12 = ["John","George","Paul"]
 
-    var e11 = ["Mohamed","Edwin","Khriz","Jason Bravo","Kevin","Khen","Jonathon","James","Melvin","Emilio","Jeffrey","Michelle","Symphony","Jessel","Jocelyn","Yongyin","Tai","Alex","Noemi","Myah","Emanuel","Kayla","Roselyn","Genesis","Terrence","Jason Valentin","Eddy"]
+    var e11 = ["John","George","Paul"]
+
+    var quests = [
+        "What is one place you've always wanted to visit and why?",
+        "What is your favorite subject in school and why?",
+        "What is one thing you learned during the pandemic?"
+    ]
+
+    var askQuestion() {
+        var diceRoll = Math.floor(Math.random() * quests.length);
+        event.preventDefault();
+        $("#questionOutput").empty();
+        $("questionOutput").text(quests[diceRoll]);
+    }
+    
 
     $("#e14Button").on("click", function() {
         var rand = Math.floor(Math.random() * e14.length);
@@ -66,7 +85,7 @@
     })
 
     $("#e11Button").on("click", function() {
-        var rand = Math.floor(Math.random() * e12.length);
+        var rand = Math.floor(Math.random() * e11.length);
         event.preventDefault();
         $("#nameOutput").empty();
         $("#nameOutput").text(e11[rand]);
