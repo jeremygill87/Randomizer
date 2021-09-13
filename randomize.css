@@ -7,8 +7,10 @@
     margin-top: 25px;
 }
 
-#nameOutput {
+#nameOutput, #questionOutput {
     padding: 15px;
     font-size: 26px;
     text-align: center;
 }
+
+

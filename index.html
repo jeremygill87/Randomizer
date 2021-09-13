@@ -41,7 +41,42 @@
 
     <script>
     
-    var e14 = ["John","George","Paul"]
+    var e14 = [
+        "Mr. Gill",
+        "Ms. Nevarez",
+        "Ms. Yang",
+        "Abduljabbar",
+        "Warda",
+        "Jennifer",
+        "German",
+        "Daffne",
+        "Alfonso",
+        "James",
+        "Omar",
+        "Erica",
+        "Candelario",
+        "Anas",
+        "Behruz",
+        "Hailey",
+        "Aaron",
+        "Mansoor",
+        "Mayte",
+        "Jovan",
+        "Nataly",
+        "Briana",
+        "Marlene",
+        "Diego",
+        "Joselyn",
+        "Emily",
+        "Blanca",
+        "Alan",
+        "Bryan",
+        "Abigail",
+        "Bernardo",
+        "Jenny",
+        "Sara",
+        "Ray"
+    ]
 
     var e13 = ["John","George","Paul"]
 
@@ -55,15 +90,16 @@
         "What is one thing you learned during the pandemic?"
     ]
 
-    var askQuestion() {
+    function askQuestion(){
         var diceRoll = Math.floor(Math.random() * quests.length);
         event.preventDefault();
         $("#questionOutput").empty();
-        $("questionOutput").text(quests[diceRoll]);
+        $("#questionOutput").text(quests[diceRoll]);
     }
     
 
     $("#e14Button").on("click", function() {
+        askQuestion();
         var rand = Math.floor(Math.random() * e14.length);
         event.preventDefault();
         $("#nameOutput").empty();
@@ -71,6 +107,7 @@
     })
 
     $("#e13Button").on("click", function() {
+        askQuestion();
         var rand = Math.floor(Math.random() * e13.length);
         event.preventDefault();
         $("#nameOutput").empty();
@@ -78,6 +115,7 @@
     })
 
     $("#e12Button").on("click", function() {
+        askQuestion();
         var rand = Math.floor(Math.random() * e12.length);
         event.preventDefault();
         $("#nameOutput").empty();
@@ -85,6 +123,7 @@
     })
 
     $("#e11Button").on("click", function() {
+        askQuestion();
         var rand = Math.floor(Math.random() * e11.length);
         event.preventDefault();
         $("#nameOutput").empty();
